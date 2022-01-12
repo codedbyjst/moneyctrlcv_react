@@ -1,5 +1,8 @@
+#old files
+/old
+
 # npm modules
 /node_modules
 
-#old files
-/old
+# npm build
+/build

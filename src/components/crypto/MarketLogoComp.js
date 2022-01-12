@@ -14,12 +14,7 @@ const MarketLogoComp = ({ marketname }) => {
     <Container>
       <div className="d-flex align-items-center p-3 my-3 rounded shadow-sm justify-content-center">
         <a href={sitelink} target="_blank" rel="noreferrer">
-          <img
-            className="img-fluid"
-            src={`https://moneyctrlcv.com/static/transactionfee/img/${marketname}_icon.png`}
-            alt={`${marketname} logo`}
-            style={{ maxHeight: '150px' }}
-          />
+          <img className="img-fluid" src={`/img/crypto/${marketname}_icon.png`} alt={`${marketname} logo`} style={{ maxHeight: '150px' }} />
         </a>
       </div>
     </Container>
