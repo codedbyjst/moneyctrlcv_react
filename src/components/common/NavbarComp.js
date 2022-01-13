@@ -66,14 +66,16 @@ const NavbarComp = () => {
           />
         </Container>
 
-        <Navbar.Offcanvas id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" placement="end" style={{ zIndex: '3000', width: '200px' }}>
-          <Offcanvas.Header
-            closeButton
-            style={{ height: 'calc(40px + 1em)' }}
-            onHide={() => {
-              setExpanded(false);
-            }}
-          >
+        <Navbar.Offcanvas
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+          placement="end"
+          style={{ zIndex: '3000', width: '200px' }}
+          onHide={() => {
+            setExpanded(false);
+          }}
+        >
+          <Offcanvas.Header closeButton style={{ height: 'calc(40px + 1em)' }}>
             <Offcanvas.Title id="offcanvasNavbarLabel">메뉴</Offcanvas.Title>
           </Offcanvas.Header>
           <hr className="m-0" />
