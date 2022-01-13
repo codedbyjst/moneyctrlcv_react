@@ -29,7 +29,7 @@ const IndutySalesToast = ({ stock_code, stock_market, indutySalesData }) => {
         if (stock_sales >= 100) {
           toast_main = (
             <div className="mb-2">
-              <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+              <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
               최근년도({stock_bsns_year}) 매출액이 <strong>{stock_sales.toLocaleString(undefined, {})}억원</strong>이에요. 관리종목 지정 기준이 50억원이니까...
               적어도 매출액때문에 그런 걸 걱정한 필요는 없겠네요!
             </div>
@@ -37,7 +37,7 @@ const IndutySalesToast = ({ stock_code, stock_market, indutySalesData }) => {
         } else if (stock_sales >= 60) {
           toast_main = (
             <div className="mb-2">
-              <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+              <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
               최근년도({stock_bsns_year}) 매출액이 <strong>{stock_sales.toLocaleString(undefined, {})}억원</strong>이에요. 관리종목 지정 기준이 50억원이니까...
               지금은 큰 문제가 보이진 않네요.
             </div>
@@ -45,7 +45,7 @@ const IndutySalesToast = ({ stock_code, stock_market, indutySalesData }) => {
         } else if (stock_sales >= 50) {
           toast_main = (
             <div className="mb-2">
-              <MdOutlineThumbDown size={20} className="me-2" />
+              <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
               최근년도({stock_bsns_year}) 매출액이 <strong>{stock_sales.toLocaleString(undefined, {})}억원</strong>이에요. 위험해요! 간신히 50억을 넘겼다고
               좋아할 게 아니라 억지로 넘겼을 가능성이 매우 높아요. 정말 고수라면 괜찮을 지 모르겠지만, 저라면 당장 던지겠어요.
             </div>
@@ -53,7 +53,7 @@ const IndutySalesToast = ({ stock_code, stock_market, indutySalesData }) => {
         } else if (stock_sales < 50) {
           toast_main = (
             <div className="mb-2">
-              <MdOutlineThumbDown size={20} className="me-2" />
+              <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
               최근년도({stock_bsns_year}) 매출액이 <strong>{stock_sales.toLocaleString(undefined, {})}억원</strong>이에요. 유감이지만 이 글이 보인다는건 이미
               관리종목에 들어갔거나 상장폐지 대상이 되었을 가능성이 커요... 혹시 아직 아닌 상태라면 당장 던지고 도망치세요!
             </div>
@@ -63,7 +63,7 @@ const IndutySalesToast = ({ stock_code, stock_market, indutySalesData }) => {
         if (stock_sales >= 60) {
           toast_main = (
             <div className="mb-2">
-              <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+              <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
               최근년도({stock_bsns_year}) 매출액이 <strong>{stock_sales.toLocaleString(undefined, {})}억원</strong>이에요. 관리종목 지정 기준이 30억원이니까...
               적어도 매출액때문에 그런 걸 걱정한 필요는 없겠네요!
             </div>
@@ -71,7 +71,7 @@ const IndutySalesToast = ({ stock_code, stock_market, indutySalesData }) => {
         } else if (stock_sales >= 40) {
           toast_main = (
             <div className="mb-2">
-              <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+              <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
               최근년도({stock_bsns_year}) 매출액이 <strong>{stock_sales.toLocaleString(undefined, {})}억원</strong>이에요. 관리종목 지정 기준이 30억원이니까...
               지금은 큰 문제가 보이진 않네요.
             </div>
@@ -79,7 +79,7 @@ const IndutySalesToast = ({ stock_code, stock_market, indutySalesData }) => {
         } else if (stock_sales >= 30) {
           toast_main = (
             <div className="mb-2">
-              <MdOutlineThumbDown size={20} className="me-2" />
+              <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
               최근년도({stock_bsns_year}) 매출액이 <strong>{stock_sales.toLocaleString(undefined, {})}억원</strong>이에요. 위험해요! 간신히 30억을 넘겼다고
               좋아할 게 아니라 억지로 넘겼을 가능성이 매우 높아요. 정말 고수라면 괜찮을 지 모르겠지만, 저라면 당장 던지겠어요.
             </div>
@@ -87,7 +87,7 @@ const IndutySalesToast = ({ stock_code, stock_market, indutySalesData }) => {
         } else if (stock_sales < 30) {
           toast_main = (
             <div className="mb-2">
-              <MdOutlineThumbDown size={20} className="me-2" />
+              <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
               최근년도({stock_bsns_year}) 매출액이 <strong>{stock_sales.toLocaleString(undefined, {})}억원</strong>이에요. 유감이지만 이 글이 보인다는건 이미
               관리종목에 들어갔거나 상장폐지 대상이 되었을 가능성이 커요... 혹시 아직 아닌 상태라면 당장 던지고 도망치세요!
             </div>

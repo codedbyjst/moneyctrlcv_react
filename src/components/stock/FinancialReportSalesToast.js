@@ -30,7 +30,7 @@ const SalesToast = ({ sales_linear_list, sales_linear_score }) => {
       if (growthrate >= 3) {
         toast_main = (
           <div className="mb-2" key="SalesToast_main_first">
-            <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+            <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
             매년 약 <strong>{`${growthrate}%`}</strong>의 성장이 기대돼요. 더 덩치가 커지겠어요!
           </div>
         );
@@ -44,7 +44,7 @@ const SalesToast = ({ sales_linear_list, sales_linear_score }) => {
       } else if (growthrate < -1) {
         toast_main = (
           <div className="mb-2" key="SalesToast_main_first">
-            <MdOutlineThumbDown size={20} className="me-2" />
+            <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
             매년 약 <strong>{growthrate}%</strong>의 하락이 예상돼요. 위험! 업종에서 파이를 뺏기고 있거나, 업종 자체가 사양산업이 되어가고 있을 수 있어요.
             자세한 분석이 필요해요.
           </div>
@@ -54,7 +54,7 @@ const SalesToast = ({ sales_linear_list, sales_linear_score }) => {
       if (sales_linear_score < 0.16) {
         toast_score = (
           <div className="mb-2" key="SalesToast_score">
-            <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+            <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
             {'매출액의 '}
             <OverlayTrigger
               key="linear_score_popover"
@@ -96,7 +96,7 @@ const SalesToast = ({ sales_linear_list, sales_linear_score }) => {
       } else if (sales_linear_score >= 0.2) {
         toast_score = (
           <div className="mb-2" key="SalesToast_score">
-            <MdOutlineThumbDown size={20} className="me-2" />
+            <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
             {'매출액의 '}
             <OverlayTrigger
               key="linear_score_popover"
@@ -153,35 +153,35 @@ const OperatingMarginToast = ({
       if (average_operating_profit_margin >= 15) {
         toast_main_first = (
           <div className="mb-2" key="OperatingMarginToast_main_first">
-            <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+            <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
             평균 영업이익률이 <strong>{`${average_operating_profit_margin}%`}</strong>에요. 이정도면 거의 고객이 신봉하는 수준이에요.
           </div>
         );
       } else if (average_operating_profit_margin >= 10) {
         toast_main_first = (
           <div className="mb-2" key="OperatingMarginToast_main_first">
-            <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+            <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
             평균 영업이익률이 <strong>{`${average_operating_profit_margin}%`}</strong>에요. 상당한 돈이 되는 사업을 하고 있네요!
           </div>
         );
       } else if (average_operating_profit_margin >= 5) {
         toast_main_first = (
           <div className="mb-2" key="OperatingMarginToast_main_first">
-            <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+            <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
             평균 영업이익률이 <strong>{`${average_operating_profit_margin}%`}</strong>에요. 이정도면 훌륭한 사업이죠.
           </div>
         );
       } else if (average_operating_profit_margin >= 0) {
         toast_main_first = (
           <div className="mb-2" key="OperatingMarginToast_main_first">
-            <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+            <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
             평균 영업이익률이 <strong>{`${average_operating_profit_margin}%`}</strong>에요. 음, 솔직히 높진 않은데, 그래도 매출액이 충분하다면 나쁘진 않아요.
           </div>
         );
       } else if (average_operating_profit_margin < 0) {
         toast_main_first = (
           <div className="mb-2" key="OperatingMarginToast_main_first">
-            <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+            <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
             평균 영업이익률이 <strong>{`${average_operating_profit_margin}%`}</strong>에요. 업종 특수로 인한 것일수도 있으니 비교해봐야 알겠지만, 일반적인
             경우엔 심각한 수치에요. 정말 투자할거라면, 신중하게 판단하세요.
           </div>
@@ -192,7 +192,7 @@ const OperatingMarginToast = ({
       if (indutyCompareData.induty_operating_profit_margin_list.length === 1) {
         toast_main_second = (
           <div className="mb-2" key="OperatingMarginToast_main_second">
-            <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />이 회사 외엔 동일 업종의 회사가 없어요! 매우 특정한 일을 다루거나, 독점이라는 강력한
+            <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />이 회사 외엔 동일 업종의 회사가 없어요! 매우 특정한 일을 다루거나, 독점이라는 강력한
             무기를 갖고 있다는 의미죠!
           </div>
         );
@@ -204,7 +204,7 @@ const OperatingMarginToast = ({
         ) {
           toast_main_second = (
             <div className="mb-2" key="OperatingMarginToast_main_second">
-              <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+              <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
               업종 평균 영업이익률은 <strong>{induty_average_operating_profit_margin}%</strong>에요. 세상에... 어떻게 이렇게 잘 팔았죠?
             </div>
           );
@@ -214,7 +214,7 @@ const OperatingMarginToast = ({
         ) {
           toast_main_second = (
             <div className="mb-2" key="OperatingMarginToast_main_second">
-              <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+              <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
               업종 평균 영업이익률은 <strong>{induty_average_operating_profit_margin}%</strong>에요. 이 집 장사 잘 하네!
             </div>
           );
@@ -234,7 +234,7 @@ const OperatingMarginToast = ({
         ) {
           toast_main_second = (
             <div className="mb-2" key="OperatingMarginToast_main_second">
-              <MdOutlineThumbDown size={20} className="me-2" />
+              <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
               업종 평균 영업이익률은 <strong>{induty_average_operating_profit_margin}%</strong>에요. 좀 더 분발해야겠어요. 남들 버는만큼은 벌어야죠.
             </div>
           );
@@ -244,7 +244,7 @@ const OperatingMarginToast = ({
         ) {
           toast_main_second = (
             <div className="mb-2" key="OperatingMarginToast_main_second">
-              <MdOutlineThumbDown size={20} className="me-2" />
+              <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
               업종 평균 영업이익률은 <strong>{induty_average_operating_profit_margin}%</strong>에요. 위험해요! 영업 활동에 더 집중해야만 해요.
             </div>
           );
@@ -269,7 +269,7 @@ const OperatingMarginToast = ({
       } else if (growthrate < -1) {
         toast_main_third = (
           <div className="mb-2" key="OperatingMarginToast_main_third">
-            <MdOutlineThumbDown size={20} className="me-2" />
+            <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
             매년 약 <strong>{`${growthrate}%`}</strong>의 변동이 예상돼요. 어어... 이거 무너지는거 아닌가...?
           </div>
         );
@@ -279,7 +279,7 @@ const OperatingMarginToast = ({
       if (operating_profit_margin_linear_score < 0.16) {
         toast_score = (
           <div className="mb-2" key="OperatingMarginToast_score">
-            <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+            <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
             {'영업이익률의 '}
             <OverlayTrigger
               key="linear_score_popover"
@@ -322,7 +322,7 @@ const OperatingMarginToast = ({
       } else if (operating_profit_margin_linear_score > 0.2) {
         toast_score = (
           <div className="mb-2" key="OperatingMarginToast_score">
-            <MdOutlineThumbDown size={20} className="me-2" />
+            <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
             {'영업이익률의 '}
             <OverlayTrigger
               key="linear_score_popover"
@@ -373,28 +373,28 @@ const NetProfitMarginToast = ({ indutyCompareData, net_profit_margin_list, net_p
       if (average_net_profit_margin >= 10) {
         toast_main_first = (
           <div className="mb-2" key="NetProfitMarginToast_main_first">
-            <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+            <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
             평균 순이익률이 <strong>{`${average_net_profit_margin}%`}</strong>에요. 엄청나네요... 거의 날강도 수준인데요?
           </div>
         );
       } else if (average_net_profit_margin >= 3) {
         toast_main_first = (
           <div className="mb-2" key="NetProfitMarginToast_main_first">
-            <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+            <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
             평균 순이익률이 <strong>{`${average_net_profit_margin}%`}</strong>에요. 좋아요! 판매한만큼은 버는것 같네요.
           </div>
         );
       } else if (average_net_profit_margin >= 0) {
         toast_main_first = (
           <div className="mb-2" key="NetProfitMarginToast_main_first">
-            <MdOutlineThumbsUpDown color="#3DFE7D" size={20} className="me-2" />
+            <MdOutlineThumbsUpDown size={20} className="me-2" />
             평균 순이익률이 <strong>{`${average_net_profit_margin}%`}</strong>에요. 정말 많이 판매하는게 아니라면, 사실 좋다고 보긴 어려운 정도네요.
           </div>
         );
       } else if (average_net_profit_margin < 0) {
         toast_main_first = (
           <div className="mb-2" key="NetProfitMarginToast_main_first">
-            <MdOutlineThumbDown color="#3DFE7D" size={20} className="me-2" />
+            <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
             평균 순이익률이 <strong>{`${average_net_profit_margin}%`}</strong>에요. 오, 맙소사... 회사 돈이 갈리고 있어요!
           </div>
         );
@@ -404,7 +404,7 @@ const NetProfitMarginToast = ({ indutyCompareData, net_profit_margin_list, net_p
       if (indutyCompareData.induty_net_profit_margin_list.length === 1) {
         toast_main_second = (
           <div className="mb-2" key="NetProfitMarginToast_main_second">
-            <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />이 회사 외엔 동일 업종의 회사가 없어요! 이 기업이 업계 그 자체네요.
+            <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />이 회사 외엔 동일 업종의 회사가 없어요! 이 기업이 업계 그 자체네요.
           </div>
         );
       } else if (indutyCompareData.induty_net_profit_margin_list.length > 1) {
@@ -415,7 +415,7 @@ const NetProfitMarginToast = ({ indutyCompareData, net_profit_margin_list, net_p
         ) {
           toast_main_second = (
             <div className="mb-2" key="NetProfitMarginToast_main_second">
-              <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+              <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
               업종 평균 순이익률은 <strong>{induty_average_net_profit_margin}%</strong>에요. 한 몫 챙기는 능력 하나는 끝내주네요.
             </div>
           );
@@ -425,7 +425,7 @@ const NetProfitMarginToast = ({ indutyCompareData, net_profit_margin_list, net_p
         ) {
           toast_main_second = (
             <div className="mb-2" key="NetProfitMarginToast_main_second">
-              <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+              <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
               업종 평균 순이익률은 <strong>{induty_average_net_profit_margin}%</strong>에요. 회사 재정에 큰 걱정은 없겠어요.
             </div>
           );
@@ -445,7 +445,7 @@ const NetProfitMarginToast = ({ indutyCompareData, net_profit_margin_list, net_p
         ) {
           toast_main_second = (
             <div className="mb-2" key="NetProfitMarginToast_main_second">
-              <MdOutlineThumbDown size={20} className="me-2" />
+              <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
               업종 평균 순이익률은 <strong>{induty_average_net_profit_margin}%</strong>에요. 회사라면... 돈을 좀 더 벌어야 하지 않을까요?
             </div>
           );
@@ -455,7 +455,7 @@ const NetProfitMarginToast = ({ indutyCompareData, net_profit_margin_list, net_p
         ) {
           toast_main_second = (
             <div className="mb-2" key="NetProfitMarginToast_main_second">
-              <MdOutlineThumbDown size={20} className="me-2" />
+              <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
               업종 평균 순이익률은 <strong>{induty_average_net_profit_margin}%</strong>에요. 안 좋아요! 경영능력을 확인해 볼 필요성이 있어요.
             </div>
           );
@@ -481,7 +481,7 @@ const NetProfitMarginToast = ({ indutyCompareData, net_profit_margin_list, net_p
       } else if (growthrate < -1) {
         toast_main_third = (
           <div className="mb-2" key="NetProfitMarginToast_main_third">
-            <MdOutlineThumbDown size={20} className="me-2" />
+            <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
             매년 약 <strong>{`${growthrate}%`}</strong>의 변동이 예상돼요. 성장하지 않는 기업은 도태되기 마련이죠...
           </div>
         );
@@ -491,7 +491,7 @@ const NetProfitMarginToast = ({ indutyCompareData, net_profit_margin_list, net_p
       if (net_profit_margin_linear_score < 0.16) {
         toast_score = (
           <div className="mb-2" key="NetProfitMarginToast_score">
-            <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+            <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
             {'순이익률의 '}
             <OverlayTrigger
               key="linear_score_popover"
@@ -534,7 +534,7 @@ const NetProfitMarginToast = ({ indutyCompareData, net_profit_margin_list, net_p
       } else if (net_profit_margin_linear_score > 0.2) {
         toast_score = (
           <div className="mb-2" key="NetProfitMarginToast_score">
-            <MdOutlineThumbDown size={20} className="me-2" />
+            <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
             {'순이익률의 '}
             <OverlayTrigger
               key="linear_score_popover"

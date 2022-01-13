@@ -30,7 +30,7 @@ const RoeToast = ({ indutyCompareData, roe_list, roe_linear_list, roe_linear_sco
       if (average_roe >= 12) {
         toast_main_first = (
           <div className="mb-2" key="RoeToast_main_first">
-            <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+            <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
             평균 ROE가 <strong>{`${average_roe}%`}</strong>에요. 워렌 버핏이 12~15%정도 나오면 좋은 회사라 했다 하니까, 이정도면 좋은 회사라고 해도 되겠죠!
           </div>
         );
@@ -45,7 +45,7 @@ const RoeToast = ({ indutyCompareData, roe_list, roe_linear_list, roe_linear_sco
       } else if (average_roe < 0) {
         toast_main_first = (
           <div className="mb-2" key="RoeToast_main_first">
-            <MdOutlineThumbDown size={20} className="me-2" />
+            <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
             평균 ROE가 <strong>{`${average_roe}%`}</strong>에요. 적자가 발생하고 있어요... 이대로면 적자가 밑천마저 갉아먹을거에요.
           </div>
         );
@@ -56,14 +56,14 @@ const RoeToast = ({ indutyCompareData, roe_list, roe_linear_list, roe_linear_sco
       if ((induty_average_roe > 0 && average_roe > induty_average_roe * 1.4) || (induty_average_roe < 0 && average_roe > induty_average_roe * 0.6)) {
         toast_main_second = (
           <div className="mb-2" key="RoeToast_main_second">
-            <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+            <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
             업종 평균 ROE는 <strong>{induty_average_roe}%</strong>에요. 아주 훌륭해요! 타 기업보다 월등히 효율적으로 자본을 사용하고 있어요.
           </div>
         );
       } else if ((induty_average_roe > 0 && average_roe > induty_average_roe * 1.1) || (induty_average_roe < 0 && average_roe > induty_average_roe * 0.9)) {
         toast_main_second = (
           <div className="mb-2" key="RoeToast_main_second">
-            <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+            <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
             업종 평균 ROE는 <strong>{induty_average_roe}%</strong>에요. 좋아요! 어디가서 이 회사는 수익성이 부족해서... 같은 소리는 안 듣겠네요.
           </div>
         );
@@ -78,14 +78,14 @@ const RoeToast = ({ indutyCompareData, roe_list, roe_linear_list, roe_linear_sco
       } else if ((induty_average_roe > 0 && average_roe > induty_average_roe * 0.6) || (induty_average_roe < 0 && average_roe > induty_average_roe * 1.4)) {
         toast_main_second = (
           <div className="mb-2" key="RoeToast_main_second">
-            <MdOutlineThumbDown size={20} className="me-2" />
+            <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
             업종 평균 ROE는 <strong>{induty_average_roe}%</strong>에요. 수익성이 좀 부족하네요. 수익 모델등에 좀 더 보완이 필요할 것 같아요.
           </div>
         );
       } else if ((induty_average_roe > 0 && average_roe < induty_average_roe * 0.6) || (induty_average_roe < 0 && average_roe < induty_average_roe * 1.4)) {
         toast_main_second = (
           <div className="mb-2" key="RoeToast_main_second">
-            <MdOutlineThumbDown size={20} className="me-2" />
+            <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
             업종 평균 ROE는 <strong>{induty_average_roe}%</strong>에요. 뭔가 사업 자체에 문제가 있어요. 상대적으로 너무 비효율적이에요. 수익 모델의 대대적인
             개편이나, 수익 창출 방식에 큰 변화가 필요할 것 같아요.
           </div>
@@ -118,7 +118,7 @@ const RoeToast = ({ indutyCompareData, roe_list, roe_linear_list, roe_linear_sco
       } else if (growthrate < -1) {
         toast_main_third = (
           <div className="mb-2" key="RoeToast_main_third">
-            <MdOutlineThumbDown size={20} className="me-2" />
+            <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
             매년 약 <strong>{`${growthrate.toFixed(2)}%`}</strong>의 하락이 예상돼요. 점점 수익성이 떨어지고 있어요! 수익 모델에 어느정도 변화가 필요할 것
             같아요.
           </div>
@@ -129,7 +129,7 @@ const RoeToast = ({ indutyCompareData, roe_list, roe_linear_list, roe_linear_sco
       if (roe_linear_score < 0.16) {
         toast_score = (
           <div className="mb-2" key="RoeToast_score">
-            <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+            <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
             {'ROE의 '}
             <OverlayTrigger
               key="linear_score_popover"
@@ -172,7 +172,7 @@ const RoeToast = ({ indutyCompareData, roe_list, roe_linear_list, roe_linear_sco
       } else if (roe_linear_score > 0.2) {
         toast_score = (
           <div className="mb-2" key="RoeToast_score">
-            <MdOutlineThumbDown size={20} className="me-2" />
+            <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
             {'ROE의 '}
             <OverlayTrigger
               key="linear_score_popover"

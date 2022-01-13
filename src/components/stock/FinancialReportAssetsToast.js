@@ -30,14 +30,14 @@ const TotalEquityToast = ({ total_equity_list, total_equity_linear_score, capita
       if (growthrate >= 0) {
         toast_main = (
           <div className="mb-2" key="TotalEquityToast_main">
-            <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+            <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
             매년 약 <strong>{`${growthrate}%`}</strong>의 성장이 기대돼요. 최소한 남는 장사를 하고 있다는건 확실하네요!
           </div>
         );
       } else if (growthrate < 0) {
         toast_main = (
           <div className="mb-2" key="TotalEquityToast_main">
-            <MdOutlineThumbDown size={20} className="me-2" />
+            <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
             매년 약 <strong>{`${growthrate}%`}</strong>의 하락이 예상돼요. 밑천을 깎아먹고 있어요! 기업의 가치가 떨어지고 있는 것 같아요...
             <OverlayTrigger
               key="capital_impairment_popover"
@@ -62,7 +62,7 @@ const TotalEquityToast = ({ total_equity_list, total_equity_linear_score, capita
       if (capital_impairment_rate >= 0) {
         toast_captial_impairment = (
           <div className="mb-2" key="TotalEquityToast_capital_impariment">
-            <MdOutlineThumbDown size={20} className="me-2" />
+            <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
             <OverlayTrigger
               key="capital_impairment_popover"
               placement="top"
@@ -127,7 +127,7 @@ const DebtRatioToast = ({ indutyCompareData, debt_ratio_list, debt_ratio_linear_
       if (average_debt_ratio >= 200) {
         toast_main_first = (
           <div className="mb-2" key="DebtRatioToast_main_first">
-            <MdOutlineThumbDown size={20} className="me-2" />
+            <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
             평균 부채비율이 <strong>{`${average_debt_ratio}%`}</strong>에요. 부채비율이 매우 높아 재무건전성을 크게 의심해 봐야 해요. 다만, 업종 특성상 그런
             걸수도 있으니까 아래 있는 업종 평균도 참조하세요.
           </div>
@@ -143,14 +143,14 @@ const DebtRatioToast = ({ indutyCompareData, debt_ratio_list, debt_ratio_linear_
       } else if (average_debt_ratio >= 50) {
         toast_main_first = (
           <div className="mb-2" key="DebtRatioToast_main_first">
-            <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+            <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
             평균 부채비율이 <strong>{`${average_debt_ratio}%`}</strong>에요. 평이한 수준이에요. 재무적으로 보자면, 건전하다고 할 수 있겠어요!
           </div>
         );
       } else if (average_debt_ratio >= 0) {
         toast_main_first = (
           <div className="mb-2" key="DebtRatioToast_main_first">
-            <MdOutlineThumbDown size={20} className="me-2" />
+            <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
             평균 부채비율이 <strong>{`${average_debt_ratio}%`}</strong>에요. 어, 뭐지? 낮으면 좋은거 아닌가? 할 수도 있겠지만, 다르게 보자면 회사가
             <OverlayTrigger
               key="leverage_popover"
@@ -177,7 +177,7 @@ const DebtRatioToast = ({ indutyCompareData, debt_ratio_list, debt_ratio_linear_
         if (average_debt_ratio > induty_average_debt_ratio * 1.2) {
           toast_main_second = (
             <div className="mb-2" key="DebtRatioToast_main_second">
-              <MdOutlineThumbDown size={20} className="me-2" />
+              <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
               업종 평균 부채비율은 <strong>{induty_average_debt_ratio}%</strong>에요. 부채비율이 상대적으로 너무 높아요! 과도하게 재정을 불안정하게 운영중일
               가능성이 커요. 와르르 맨션이 되기 싫다면 조심해야 할 거에요.
             </div>
@@ -185,7 +185,7 @@ const DebtRatioToast = ({ indutyCompareData, debt_ratio_list, debt_ratio_linear_
         } else if (average_debt_ratio > induty_average_debt_ratio * 0.8) {
           toast_main_second = (
             <div className="mb-2" key="DebtRatioToast_main_second">
-              <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+              <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
               업종 평균 부채비율은 <strong>{induty_average_debt_ratio}%</strong>에요. 평균과 비슷한 부채비율이라면, 산업 자체가 위험한 게 아니라면 적절한 재정
               운영이 이뤄지고 있다고 볼 수 있어요.
             </div>
@@ -214,7 +214,7 @@ const DebtRatioToast = ({ indutyCompareData, debt_ratio_list, debt_ratio_linear_
       if (growthrate > 20 || growthrate < -20) {
         toast_main_third = (
           <div className="mb-2" key="DebtRatioToast_main_third">
-            <MdOutlineThumbDown className="me-2" size={20} />
+            <MdOutlineThumbDown color="#DE061A" className="me-2" size={20} />
             매년 약 <strong>{`${growthrate}%`}</strong>의 변동이 예상돼요. 변화가 너무 심해요! 이렇게 지속적으로 큰 변화가 있는 경우, 회사의 재무구조 및 전략
             자체가 변경되었을 가능성이 높아요. 또는.. 망해가고 있던가요.
           </div>
@@ -222,7 +222,7 @@ const DebtRatioToast = ({ indutyCompareData, debt_ratio_list, debt_ratio_linear_
       } else if (-20 < growthrate && growthrate < 20) {
         toast_main_third = (
           <div className="mb-2" key="DebtRatioToast_main_third">
-            <MdOutlineThumbDown className="me-2" size={20} />
+            <MdOutlineThumbDown color="#DE061A" className="me-2" size={20} />
             매년 약 <strong>{`${growthrate}%`}</strong>의 변동이 예상돼요. 지속적인 큰 변화는 보이지 않네요. 재무구조는 거의 그대로라고 볼 수 있을 것 같아요.
           </div>
         );
@@ -232,7 +232,7 @@ const DebtRatioToast = ({ indutyCompareData, debt_ratio_list, debt_ratio_linear_
       if (debt_ratio_linear_score < 0.16) {
         toast_score = (
           <div className="mb-2" key="DebtRatioToast_score">
-            <MdOutlineThumbUp color="#3DFE7D" size={20} className="me-2" />
+            <MdOutlineThumbUp color="#4FB443" size={20} className="me-2" />
             {'부채비율의 '}
             <OverlayTrigger
               key="linear_score_popover"
@@ -274,7 +274,7 @@ const DebtRatioToast = ({ indutyCompareData, debt_ratio_list, debt_ratio_linear_
       } else if (debt_ratio_linear_score >= 0.2) {
         toast_score = (
           <div className="mb-2" key="DebtRatioToast_score">
-            <MdOutlineThumbDown size={20} className="me-2" />
+            <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
             {'부채비율의 '}
             <OverlayTrigger
               key="linear_score_popover"
