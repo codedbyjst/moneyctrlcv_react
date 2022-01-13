@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Form, Table } from 'react-bootstrap';
+import { Button, Form, Table } from 'react-bootstrap';
 import ReactPaginate from 'react-paginate';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -90,10 +90,16 @@ const FinancialReportTable = ({ marketname, pagenum }) => {
           {datas.map((data) => (
             <tr className="text-center" key={data.stock_code}>
               <td>
-                <Link to={`/stock/financial_report/${data.stock_code}`}>{data.stock_name}</Link>
+                <Link to={`/stock/financial_report/${data.stock_code}`} style={{ textDecorationLine: 'none' }}>
+                  <Button className="p-1 rounded" variant="secondary">
+                    {data.stock_name}
+                  </Button>
+                </Link>
               </td>
-              <td>{data.stock_code}</td>
-              <td className="d-none d-md-table-cell text-end">{parseFloat(data.total_assets).toLocaleString(undefined, {})}원</td>
+              <td style={{ verticalAlign: 'middle' }}>{data.stock_code}</td>
+              <td className="d-none d-md-table-cell text-end" style={{ verticalAlign: 'middle' }}>
+                {parseFloat(data.total_assets).toLocaleString(undefined, {})}원
+              </td>
             </tr>
           ))}
         </tbody>
