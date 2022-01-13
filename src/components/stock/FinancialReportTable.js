@@ -73,7 +73,7 @@ const FinancialReportTable = ({ marketname, pagenum }) => {
         />
       </Form>
       <Table hover className="border-0">
-        <thead className="table-dark" style={{ position: 'sticky', top: '60px' }}>
+        <thead className="table-dark" style={{ position: 'sticky', top: '116px' }}>
           <tr>
             <th className="w-50 text-center" style={{ cursor: 'pointer' }} onClick={() => requestSort('stock_name')}>
               종목

@@ -74,7 +74,7 @@ const TransactionfeeTable = ({ marketname, setUpdatetime }) => {
         />
       </Form>
       <Table hover className="border-0">
-        <thead className="table-dark" style={{ position: 'sticky', top: '60px' }}>
+        <thead className="table-dark" style={{ position: 'sticky', top: '116px' }}>
           <tr>
             <th className="w-25 text-center" style={{ cursor: 'pointer' }} onClick={() => requestSort('name')}>
               코인
