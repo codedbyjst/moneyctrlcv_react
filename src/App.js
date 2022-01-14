@@ -14,6 +14,12 @@ function App() {
         {/* '/'경로 가상화폐 출금수수료로 Route */}
         <Route path="/" element={<Navigate to="/crypto/transactionfee/bithumb" />} />
 
+        {/* '/stock/financial_report/kospi'경로 list로 Route */}
+        <Route path="/stock/financial_report/kospi" element={<Navigate to="/stock/financial_report/kospi/1" />} />
+
+        {/* '/stock/financial_report/kospi'경로 list로 Route */}
+        <Route path="/stock/financial_report/kosdaq" element={<Navigate to="/stock/financial_report/kosdaq/1" />} />
+
         {/* 가상화폐 출금수수료 */}
         <Route path="/crypto/transactionfee/:marketname" element={<TransactionfeeMarket />} />
 
