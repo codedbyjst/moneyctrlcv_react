@@ -21,12 +21,11 @@ const FinancialReportMarket = ({ marketname }) => {
       {/*Logo 컴포넌트를 세팅합니다. */}
       <LogoComp />
 
-      {/*NoticeAlert 컴포넌트를 세팅합니다. */}
-      <NoticeAlert />
-
       {/*MAIN*/}
       <Container>
         <h1 className="mt-2 text-center">{marketname_kor} 재무제표 분석</h1>
+        {/*NoticeAlert 컴포넌트를 세팅합니다. */}
+        <NoticeAlert />
         <Alert className="mt-2 mb-3 text-center" variant="primary">
           각 기업의 재무제표 분석을 제공합니다.
           <br />

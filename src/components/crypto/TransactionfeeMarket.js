@@ -19,12 +19,12 @@ const Transactionfee = () => {
       {/*Logo 컴포넌트를 세팅합니다. */}
       <MarketLogoComp marketname={marketname} />
 
-      {/*NoticeAlert 컴포넌트를 세팅합니다. */}
-      <NoticeAlert />
-
       {/*Main*/}
       <Container>
         <h1 className="mt-2 text-center">{marketname} 출금 수수료</h1>
+
+        {/*NoticeAlert 컴포넌트를 세팅합니다. */}
+        <NoticeAlert />
 
         <Alert className="mt-2 mb-3 text-center" variant="primary">
           아래의 시세는 {marketname}의 최근 거래가
@@ -34,10 +34,7 @@ const Transactionfee = () => {
         </Alert>
 
         {/*Transactionfee 테이블을 가져옵니다.*/}
-        <TransactionfeeTable
-          marketname={marketname}
-          setUpdatetime={setUpdatetime}
-        />
+        <TransactionfeeTable marketname={marketname} setUpdatetime={setUpdatetime} />
       </Container>
     </div>
   );
