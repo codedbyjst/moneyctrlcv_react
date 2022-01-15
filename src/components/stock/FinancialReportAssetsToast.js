@@ -25,7 +25,10 @@ const TotalEquityToast = ({ total_equity_list, total_equity_linear_score, capita
       /* 성장률을 연산합니다.*/
       let exnan_total_equity_list = total_equity_list.filter((value) => !isNaN(value));
       const growthrate = parseFloat(
-        ((Math.pow(exnan_total_equity_list.at(-1) / exnan_total_equity_list.at(0), 1 / (exnan_total_equity_list.length - 1)) - 1) * 100).toFixed(2),
+        (
+          (Math.pow(exnan_total_equity_list[exnan_total_equity_list.length - 1] / exnan_total_equity_list[0], 1 / (exnan_total_equity_list.length - 1)) - 1) *
+          100
+        ).toFixed(2),
       );
       if (growthrate >= 0) {
         toast_main = (
@@ -58,7 +61,9 @@ const TotalEquityToast = ({ total_equity_list, total_equity_linear_score, capita
       }
       /* toast_capital_impairment */
       let exnan_capital_list = capital_list.filter((value) => !isNaN(value));
-      const capital_impairment_rate = parseFloat(((1 - exnan_total_equity_list.at(-1) / exnan_capital_list.at(-1)) * 100).toFixed(2));
+      const capital_impairment_rate = parseFloat(
+        ((1 - exnan_total_equity_list[exnan_total_equity_list.length - 1] / exnan_capital_list[exnan_capital_list.length - 1]) * 100).toFixed(2),
+      );
       if (capital_impairment_rate >= 0) {
         toast_captial_impairment = (
           <div className="mb-2" key="TotalEquityToast_capital_impariment">

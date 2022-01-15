@@ -25,7 +25,8 @@ const SalesToast = ({ sales_linear_list, sales_linear_score }) => {
       /* 성장률을 연산합니다.*/
       let exnan_sales_linear_list = sales_linear_list.filter((value) => !isNaN(value));
       const growthrate = parseFloat(
-        (Math.pow(exnan_sales_linear_list.at(-1) / exnan_sales_linear_list.at(0), 1 / (exnan_sales_linear_list.length - 1)) - 1) * 100,
+        (Math.pow(exnan_sales_linear_list[exnan_sales_linear_list.length - 1] / exnan_sales_linear_list[0], 1 / (exnan_sales_linear_list.length - 1)) - 1) *
+          100,
       ).toFixed(2);
       if (growthrate >= 3) {
         toast_main = (

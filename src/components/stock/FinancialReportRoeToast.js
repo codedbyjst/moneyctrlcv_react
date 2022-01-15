@@ -97,7 +97,7 @@ const RoeToast = ({ indutyCompareData, roe_list, roe_linear_list, roe_linear_sco
       /* 최초값과 최근값의 부호가 다른 경우, growthrate가 제대로 구해지지 않습니다. */
       /* 이 경우엔 가장 최근 년도 두개의 차이로 구합니다. */
       if (isNaN(growthrate)) {
-        growthrate = exnan_roe_list.at(-1) - exnan_roe_list.at(-2);
+        growthrate = exnan_roe_list[exnan_roe_list.length - 1] - exnan_roe_list[exnan_roe_list.length - 2];
       }
       if (growthrate >= 3) {
         toast_main_third = (
