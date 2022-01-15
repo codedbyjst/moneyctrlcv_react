@@ -227,7 +227,7 @@ const DebtRatioToast = ({ indutyCompareData, debt_ratio_list, debt_ratio_linear_
       } else if (-20 < growthrate && growthrate < 20) {
         toast_main_third = (
           <div className="mb-2" key="DebtRatioToast_main_third">
-            <MdOutlineThumbDown color="#DE061A" className="me-2" size={20} />
+            <MdOutlineThumbsUpDown className="me-2" size={20} />
             매년 약 <strong>{`${growthrate}%`}</strong>의 변동이 예상돼요. 지속적인 큰 변화는 보이지 않네요. 재무구조는 거의 그대로라고 볼 수 있을 것 같아요.
           </div>
         );
