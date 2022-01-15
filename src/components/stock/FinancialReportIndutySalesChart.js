@@ -1,8 +1,8 @@
 import axios from 'axios';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from 'chart.js';
+import { Chart as ChartJS, registerables } from 'chart.js';
 import { useEffect, useState } from 'react';
 import { Doughnut } from 'react-chartjs-2';
-ChartJS.register(ArcElement, Tooltip, Legend, Title);
+ChartJS.register(...registerables);
 
 const FinancialReportIndutySalesChart = ({ aspectRatio, stock_code }) => {
   const [chartdata_indutysales, setChartdata_indutysales] = useState();
