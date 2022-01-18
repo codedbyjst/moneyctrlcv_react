@@ -175,14 +175,14 @@ const OperatingMarginToast = ({
       } else if (average_operating_profit_margin >= 0) {
         toast_main_first = (
           <div className="mb-2" key="OperatingMarginToast_main_first">
-            <MdOutlineThumbsUpDown color="#4FB443" size={20} className="me-2" />
+            <MdOutlineThumbsUpDown size={20} className="me-2" />
             평균 영업이익률이 <strong>{`${average_operating_profit_margin}%`}</strong>에요. 음, 솔직히 높진 않은데, 그래도 매출액이 충분하다면 나쁘진 않아요.
           </div>
         );
       } else if (average_operating_profit_margin < 0) {
         toast_main_first = (
           <div className="mb-2" key="OperatingMarginToast_main_first">
-            <MdOutlineThumbDown color="#4FB443" size={20} className="me-2" />
+            <MdOutlineThumbDown color="#DE061A" size={20} className="me-2" />
             평균 영업이익률이 <strong>{`${average_operating_profit_margin}%`}</strong>에요. 업종 특수로 인한 것일수도 있으니 비교해봐야 알겠지만, 일반적인
             경우엔 심각한 수치에요. 정말 투자할거라면, 신중하게 판단하세요.
           </div>
