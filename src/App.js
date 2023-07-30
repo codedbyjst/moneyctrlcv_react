@@ -11,8 +11,8 @@ function App() {
         {/* 404 Error(PageNotFound) 에러 핸들링 */}
         <Route path="*" element={<NotFoundPage />} />
 
-        {/* '/'경로 가상화폐 출금수수료로 Route */}
-        {/* <Route path="/" element={<Navigate to="/crypto/transactionfee/bithumb" />} /> */}
+        {/* 랜딩 페이지 KOSPI 재무제표 분석으로 이동 */}
+        <Route path="/" element={<Navigate replace to="/stock/financial_report/kospi/1" />} />
 
         {/* '/stock/financial_report/kospi'경로 list로 Route */}
         <Route path="/stock/financial_report/kospi" element={<Navigate to="/stock/financial_report/kospi/1" />} />

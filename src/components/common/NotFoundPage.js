@@ -5,7 +5,7 @@ const NotFoundPage = () => {
     <div>
       Not Found Error.(404)
       <p>
-        Did you mean <Link to="/crypto/transactionfee/bithumb">https://moneyctrlcv.com/crypto/transactionfee/bithumb</Link>?
+        Did you mean <Link to="/stock/financial_report/kospi/1">코스피 재무제표 분석</Link>?
       </p>
     </div>
   );
