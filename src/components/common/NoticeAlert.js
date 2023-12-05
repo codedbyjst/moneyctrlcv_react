@@ -10,7 +10,7 @@ const NoticeAlert = () => {
           https://codedbyjst.tistory.com/
         </a>
         <br />
-        가장 최근 패치일 : 2022.06.30 02:30
+        가장 최근 패치일 : 2023.12.06 02:00
       </Alert>
     </div>
   );
